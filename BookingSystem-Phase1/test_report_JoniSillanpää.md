@@ -14,7 +14,7 @@
 **Test environment & dates:**  
 - Start:  21:02
 - End:  21:03
-- Test environment details (OS, runtime, DB, browsers): Windows 11, PostgreSQL, Firefox
+- Test environment details (OS, runtime, DB, browsers): Windows 11, Burp, PostgreSQL, Firefox, Chromium
 
 **Assumptions & constraints:**  
 - e.g., credentials provided, limited time, etc.
