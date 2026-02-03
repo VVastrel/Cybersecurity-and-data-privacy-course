@@ -59,7 +59,7 @@
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
 | F-01 | 🔴 High | Vulnerable to Path Traversal attack | An attacker may manipulate a URL in such a way that the web site will execute or reveal the contents  |  |
-| F-02 | 🔴 High | SQL Injection possible | The page results were successfully manipulated using the boolean conditions |  |
+| F-02 | 🔴 High | SQL Injection might be possible | The page results were successfully manipulated using the boolean conditions | ![sqlmapResult](sqlmapResult.png) |
 | F-03 | 🟠 Medium | Absence of Anti-CSRF Tokens | No Anti-CSRF tokens were found in a HTML submission form | <form action="/register" method="POST"> |
 | F-04 | 🟠 Medium | Content Security Policy (CSP) Header Not Set | Not safe against XSS and data injection attacks |  |
 | F-05 | 🟠 Medium | Missing Anti-clickjacking Header | The response does not protect against 'ClickJacking' attacks |  |
