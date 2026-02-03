@@ -4,20 +4,21 @@
 - Name: Joni Sillanpää 
 
 **Purpose:**  
-- Describe the purpose of this test (e.g., identify vulnerabilities in registration and authentication flows).
+- To asses web application weaknesses such as injection flaws and improper handling of user input.
 
 **Scope:**  
-- Tested components:  
+- Tested components: GET & POST requests, Form submissions, Headers and error handling
 - Exclusions:  
-- Test approach: Gray-box / Black-box / White-box
+- Test approach: White-Box
 
 **Test environment & dates:**  
 - Start:  21:02
 - End:  21:03
-- Test environment details (OS, runtime, DB, browsers):
+- Test environment details (OS, runtime, DB, browsers): Windows 11, PostgreSQL, Firefox
 
 **Assumptions & constraints:**  
 - e.g., credentials provided, limited time, etc.
+- The application was made to have obvious weaknesses on purpose for the sake of this exercise.
 
 ---
 
@@ -28,11 +29,11 @@
 **Overall risk level:** (Low / Medium / High / Critical)
 
 **Top 5 immediate actions:**  
-1.  Implement unpredictable CSRF per session tokens
-2.  Set Content Security Policy (CSP) Header
-3.  Deny the usage of iframe
-4.  Replace detailed error messages with generic ones
-5.  Use nosniff on all responses
+1.  Use an "accept known good" input validation strategy
+2.  Check all data on server side
+3.  Implement unpredictable CSRF per session tokens
+4.  Set Content Security Policy (CSP) Header
+5.  Deny the usage of iframe
 
 ---
 
@@ -40,6 +41,8 @@
 
 |  **Severity Level**  | **Description**                                                                                                              | **Recommended Action**           |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+|     🔴 **High**      | Path Traversal.                                                                                                              | *Immediate fix required*         |
+|     🔴 **High**      | SQL Injection.                                                                                                               | *Immediate fix required*         |
 |     🟠 **Medium**    | Absence of Anti-CSRF Tokens.                                                                                                 | *Immediate fix required*         |
 |     🟠 **Medium**    | Content Security Policy (CSP) Header Not Set.                                                                                | *Fix ASAP*                       |
 |     🟠 **Medium**    | Missing Anti-Clickjacking Header.                                                                                            | *Fix soon*                       |
@@ -55,11 +58,13 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🟠 Medium | Absence of Anti-CSRF Tokens | No Anti-CSRF tokens were found in a HTML submission form | <form action="/register" method="POST"> |
-| F-02 | 🟠 Medium | Content Security Policy (CSP) Header Not Set | Not safe against XSS and data injection attacks |  |
-| F-03 | 🟠 Medium | Missing Anti-clickjacking Header | The response does not protect against 'ClickJacking' attacks |  |
-| F-04 | 🟡 Low | Application Error Disclosure | This page contains an error/warning message that may disclose sensitive information | HTTP/1.1 500 Internal Server Error |
-| F-05 | 🟡 Low | X-Content-Type-Options Header Missing | The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff' |  |
+| F-01 | 🔴 High | Vulnerable to Path Traversal attack | An attacker may manipulate a URL in such a way that the web site will execute or reveal the contents  |  |
+| F-02 | 🔴 High | SQL Injection possible | The page results were successfully manipulated using the boolean conditions |  |
+| F-03 | 🟠 Medium | Absence of Anti-CSRF Tokens | No Anti-CSRF tokens were found in a HTML submission form | <form action="/register" method="POST"> |
+| F-04 | 🟠 Medium | Content Security Policy (CSP) Header Not Set | Not safe against XSS and data injection attacks |  |
+| F-05 | 🟠 Medium | Missing Anti-clickjacking Header | The response does not protect against 'ClickJacking' attacks |  |
+| F-06 | 🟡 Low | Application Error Disclosure | This page contains an error/warning message that may disclose sensitive information | HTTP/1.1 500 Internal Server Error |
+| F-07 | 🟡 Low | X-Content-Type-Options Header Missing | The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff' |  |
 
 ---
 
