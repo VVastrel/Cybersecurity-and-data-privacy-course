@@ -4,11 +4,11 @@
 - Name: Joni Sillanpää 
 
 **Purpose:**  
-- To asses web application weaknesses such as injection flaws and improper handling of user input.
+- To asses Booking System weaknesses such as injection flaws and improper handling of user input.
 
 **Scope:**  
 - Tested components: GET & POST requests, Form submissions, Headers and error handling
-- Exclusions:  
+- Exclusions: Business Logic Vulnerabilities
 - Test approach: White-Box
 
 **Test environment & dates:**  
@@ -26,6 +26,7 @@
 
 **Short summary (1-2 sentences):** 
 ZAP scan on Booking Site identified multiple security weaknesses, two of which were high risk Path Traversal and SQL Injection risks.
+SQLmap and Burp were also used to provide evidence and context for security risks.
 
 
 **Overall risk level:** (Low / Medium / High / Critical)
@@ -66,7 +67,7 @@ Overall risk level is High, because there's multiple high risk security problems
 | F-03 | 🟠 Medium | Absence of Anti-CSRF Tokens | No Anti-CSRF tokens were found in a HTML submission form | ![vulnerableForm](3.png) |
 | F-04 | 🟠 Medium | Content Security Policy (CSP) Header Not Set | Not safe against XSS and data injection attacks | ![missingCSP](5.png) |
 | F-05 | 🟠 Medium | Missing Anti-clickjacking Header | The response does not protect against 'ClickJacking' attacks | ![missingXFRAME](5.png) |
-| F-06 | 🟡 Low | Application Error Disclosure | This page contains an error/warning message that may disclose sensitive information | HTTP/1.1 500 Internal Server Error |
+| F-06 | 🟡 Low | Application Error Disclosure | This page contains an error/warning message that may disclose sensitive information | ![appError](6.png) |
 | F-07 | 🟡 Low | X-Content-Type-Options Header Missing | The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff' | ![missingXCTO](5.png) |
 
 ---
@@ -79,9 +80,7 @@ Overall risk level is High, because there's multiple high risk security problems
 
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
-**Purpose:**  
-- Attach or link your OWASP ZAP scan results (Markdown format preferred).
-
+[Zap Report](https://github.com/VVastrel/Cybersecurity-and-data-privacy-course/blob/fa373a92866c4dea9361d6e2316dbf65da6cd910/BookingSystem-Phase1/zap_report_round1.md)
 ---
 
 **Instructions:**
@@ -90,6 +89,7 @@ Overall risk level is High, because there's multiple high risk security problems
 
 ---
 > [!NOTE]
-> 📁 **Attach full report:** → `check itslearning` → **Add a link here**
+> 📁 **Attach full report:** → `check itslearning` → **[Zap Report](https://github.com/VVastrel/Cybersecurity-and-data-privacy-course/blob/fa373a92866c4dea9361d6e2316dbf65da6cd910/BookingSystem-Phase1/zap_report_round1.md)**
+
 
 ---
