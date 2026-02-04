@@ -24,9 +24,12 @@
 
 # 2️⃣ Executive Summary
 
-**Short summary (1-2 sentences):**  
+**Short summary (1-2 sentences):** 
+ZAP scan on Booking Site identified multiple security weaknesses, two of which were high risk Path Traversal and SQL Injection risks.
+
 
 **Overall risk level:** (Low / Medium / High / Critical)
+Overall risk level is High, because there's multiple high risk security problems.
 
 **Top 5 immediate actions:**  
 1.  Use an "accept known good" input validation strategy
@@ -41,13 +44,13 @@
 
 |  **Severity Level**  | **Description**                                                                                                              | **Recommended Action**           |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-|     🔴 **High**      | Path Traversal.                                                                                                              | *Immediate fix required*         |
-|     🔴 **High**      | SQL Injection.                                                                                                               | *Immediate fix required*         |
-|     🟠 **Medium**    | Absence of Anti-CSRF Tokens.                                                                                                 | *Immediate fix required*         |
-|     🟠 **Medium**    | Content Security Policy (CSP) Header Not Set.                                                                                | *Fix ASAP*                       |
-|     🟠 **Medium**    | Missing Anti-Clickjacking Header.                                                                                            | *Fix soon*                       |
-|     🟡 **Low**       | Application Error Disclosure.                                                                                                | *Monitor and fix in maintenance* |
-|     🟡 **Low**       | X-Content-Type-Options Header Missing.                                                                                       | *Monitor and fix in maintenance* |
+|     🔴 **High**      | Path Traversal.                                                                                                              | *Use an allow list of acceptable inputs that strictly conform to specifications*         |
+|     🔴 **High**      | SQL Injection.                                                                                                               | *Type check all data on the server side*         |
+|     🟠 **Medium**    | Absence of Anti-CSRF Tokens.                                                                                                 | *Use anti-CSRF packages such as the OWASP CSRFGuard*         |
+|     🟠 **Medium**    | Content Security Policy (CSP) Header Not Set.                                                                                | *Configure web server, application server, load balancer, etc to set CSP header*                       |
+|     🟠 **Medium**    | Missing Anti-Clickjacking Header.                                                                                            | *Ensure X-Frame is set on all web pages returned by the site*                       |
+|     🟡 **Low**       | Application Error Disclosure.                                                                                                | *Implement custom error pages* |
+|     🟡 **Low**       | X-Content-Type-Options Header Missing.                                                                                       | *Set content header to use nosniff* |
 
 
 ---
