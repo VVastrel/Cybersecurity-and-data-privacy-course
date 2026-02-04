@@ -65,9 +65,9 @@ Overall risk level is High, because there's multiple high risk security problems
 | F-02 | 🔴 High | SQL Injection might be possible | The page results were successfully manipulated using the boolean conditions | ![sqlmapResult](sqlmapResult.png) |
 | F-03 | 🟠 Medium | Absence of Anti-CSRF Tokens | No Anti-CSRF tokens were found in a HTML submission form | ![vulnerableForm](3.png) |
 | F-04 | 🟠 Medium | Content Security Policy (CSP) Header Not Set | Not safe against XSS and data injection attacks | ![missingCSP](5.png) |
-| F-05 | 🟠 Medium | Missing Anti-clickjacking Header | The response does not protect against 'ClickJacking' attacks |  |
+| F-05 | 🟠 Medium | Missing Anti-clickjacking Header | The response does not protect against 'ClickJacking' attacks | ![missingXFRAME](5.png) |
 | F-06 | 🟡 Low | Application Error Disclosure | This page contains an error/warning message that may disclose sensitive information | HTTP/1.1 500 Internal Server Error |
-| F-07 | 🟡 Low | X-Content-Type-Options Header Missing | The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff' |  |
+| F-07 | 🟡 Low | X-Content-Type-Options Header Missing | The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff' | ![missingXCTO](5.png) |
 
 ---
 
