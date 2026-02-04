@@ -9,3 +9,5 @@
 | 21.1.2026 | 4 | Reading through course content on Portswigger.net and participating in the lecture | Studied SQL injection methods, completed the first lab and learned about next task on lecture |
 | 23.1.2026 | 4 | Completing labs on Portswigger.net | Did all the required labs for the assignment and wrote reflections about all of them |
 | 27.1.2026 | 4 | Setting up testing environment for ZAP scan | Completed ZAP scan and made ZAP report |
+| 3.2.2026 | 2 | Writing the test report | Due to technical issues, got the test report only halfway done |
+| 4.2.2026 | 2 | Finished the test report | Finalized the test report, ran additional test with Burp and wrestled with github |
