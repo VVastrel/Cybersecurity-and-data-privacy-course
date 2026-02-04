@@ -12,8 +12,8 @@
 - Test approach: White-Box
 
 **Test environment & dates:**  
-- Start:  21:02
-- End:  21:03
+- Start:  Fri 30.1.2026, 21:02
+- End:  Tue 4.2.2026, 14:50
 - Test environment details (OS, runtime, DB, browsers): Windows 11, Burp, PostgreSQL, Firefox, Chromium
 
 **Assumptions & constraints:**  
