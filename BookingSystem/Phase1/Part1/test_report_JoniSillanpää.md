@@ -17,7 +17,7 @@
 - Test environment details (OS, runtime, DB, browsers): Windows 11, Burp, PostgreSQL, Firefox, Chromium
 
 **Assumptions & constraints:**  
-- e.g., credentials provided, limited time, etc.
+- ZAP constraints like limited business logic awareness and limited client-side coverage.
 - The application was made to have obvious weaknesses on purpose for the sake of this exercise.
 
 ---
