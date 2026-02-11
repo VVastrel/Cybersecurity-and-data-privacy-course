@@ -11,3 +11,4 @@
 | 27.1.2026 | 4 | Setting up testing environment for ZAP scan | Completed ZAP scan and made ZAP report |
 | 3.2.2026 | 2 | Writing the test report | Due to technical issues, got the test report only halfway done |
 | 4.2.2026 | 2 | Finished the test report | Finalized the test report, ran additional test with Burp and wrestled with github |
+| 11.2.2026 | 2 | Working on part2 of the booking system assignment | Finished the assignment and submitted |
