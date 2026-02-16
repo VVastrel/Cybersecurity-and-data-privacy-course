@@ -12,3 +12,4 @@
 | 3.2.2026 | 2 | Writing the test report | Due to technical issues, got the test report only halfway done |
 | 4.2.2026 | 2 | Finished the test report | Finalized the test report, ran additional test with Burp and wrestled with github |
 | 11.2.2026 | 2 | Working on part2 of the booking system assignment | Finished the assignment and submitted |
+| 16.2.2026 | 4 | Working on phase2 assignment | Made a ZAP report, used hashcat to crack passwords and submitted the assignement |
