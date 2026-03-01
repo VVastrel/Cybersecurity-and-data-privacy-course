@@ -13,3 +13,4 @@
 | 4.2.2026 | 2 | Finished the test report | Finalized the test report, ran additional test with Burp and wrestled with github |
 | 11.2.2026 | 2 | Working on part2 of the booking system assignment | Finished the assignment and submitted |
 | 16.2.2026 | 4 | Working on phase2 assignment | Made a ZAP report, used hashcat to crack passwords and submitted the assignement |
+| 1.3.2026 | 2 | Working on phase3 assignment | Made a ZAP report, completed browser testing and auth testing |
