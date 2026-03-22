@@ -15,3 +15,5 @@
 | 16.2.2026 | 4 | Working on phase2 assignment | Made a ZAP report, used hashcat to crack passwords and submitted the assignement |
 | 1.3.2026 | 2 | Working on phase3 assignment | Made a ZAP report, completed browser testing and auth testing |
 | 11.3.2026 | 1,5 | Working on phase4 assignment | Went through GDPR checklist and added requested files to repo |
+| 18.3.2026 | 2 | Working on portswigger labs | Completed SQL injection labs |
+| 22.3.2026 | 2 | Working on portswigger labs and the final report for the course | Completed Cross-site scripting labs and wrote the final report for the course |
